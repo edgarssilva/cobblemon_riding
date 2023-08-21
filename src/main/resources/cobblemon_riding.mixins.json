@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.edgarssilva.cobblemon_riding.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "cobblemon_riding.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
