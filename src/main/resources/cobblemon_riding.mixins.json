@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "cobblemon_riding.refmap.json",
   "mixins": [
+    "PokemonEntityMixin"
   ],
   "client": [
   ],
