@@ -149,7 +149,6 @@ public abstract class PokemonEntityMixin extends ShoulderRidingEntity implements
 
             super.travel(new Vec3(motionX, 0, motionZ));
 
-
             if ((cobblemon_riding$canFly() && cobblemon_riding$isFlying) || this.isUnderWater()) {
                 Vec3 delta = this.getDeltaMovement();
                 double deltaY = delta.y;
@@ -157,6 +156,7 @@ public abstract class PokemonEntityMixin extends ShoulderRidingEntity implements
                 if (this.cobblemon_riding$flyDown) deltaY = -0.2f;
                 else if (this.cobblemon_riding$holdUp) deltaY = 0.04f;
                 else if (this.cobblemon_riding$flyUp) deltaY = 0.15f;
+                else if (this.isUnderWater()) deltaY = 0; // Stop the pokemon from floating up or down
                 else if (deltaY < 0) deltaY *= 0.25f; //Slow down the gravity
 
                 this.setDeltaMovement(delta.x, deltaY, delta.z);

@@ -42,10 +42,11 @@ public class CobblemonRiding {
     private void commonSetup(final FMLCommonSetupEvent event) {
         ModMessages.register();
 
-        RideablePokemonConfig.POKEMON_LIST.get().forEach((str) -> {
+        // Can't garentee that the pokemon species will be loaded before this mod
+      /*  RideablePokemonConfig.POKEMON_LIST.get().forEach((str) -> {
             if (PokemonSpecies.INSTANCE.getByIdentifier(new ResourceLocation(str)) == null)
                 LOGGER.error("Invalid pokemon species:" + str);
-        });
+        }); */
 
         LOGGER.info("Cobblemon Riding has been loaded");
     }
